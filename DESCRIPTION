@@ -1,0 +1,9 @@
+Package: murmurPCA
+Title: MRMR PCA
+Version: 1.1
+Date: 2013.12.1
+Author: Diman Todorov
+Maintainer: Diman Todorov <diman.todorov@gmail.com>
+Description: PCA for discrete data using information theory.
+License: MIT
+Depends: infotheo 

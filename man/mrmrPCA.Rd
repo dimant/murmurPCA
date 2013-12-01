@@ -14,15 +14,15 @@ mrmrPCA(x, y = c(), method="CI")
 
 
 \arguments{
-  \item{x} {
+  \item{x}{
     A matrix of variables.
   }
 
-  \item{y} {
+  \item{y}{
     A vector describing the class for each row.
   }
 
-  \item(method) {
+  \item{method}{
     Method for measuring variance and covariance between columns.
   }
 
@@ -32,14 +32,14 @@ mrmrPCA(x, y = c(), method="CI")
   \code{mrmrPCA} returns an list with class "princomp" as returned by
   the \code{princomp} function with the following components:
 
-  \item{sdev} { e$values + abs(min(e$values)) }
-  \item{loadings} { the matrix of variable loadings (i.e., a matrix
+  \item{sdev}{ e$values + abs(min(e$values)) }
+  \item{loadings}{ the matrix of variable loadings (i.e., a matrix
   the columns of which contain the eigenvectors). TODO: make it of class
   \code{loadings}}
-  \item{n.obs} { the number of observations. }
-  \item{scale} { currently all 1s because I am not sure what this is. }
-  \item{scores} { the data rotated along the principal components. }
-  \item{call} { the matched call. }
+  \item{n.obs}{ the number of observations. }
+  \item{scale}{ currently all 1s because I am not sure what this is. }
+  \item{scores}{ the data rotated along the principal components. }
+  \item{call}{ the matched call. }
 }
 
 \details{

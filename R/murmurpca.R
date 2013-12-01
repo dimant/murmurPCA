@@ -8,6 +8,8 @@ matrixCPU <- function(x, y, goal)
             m[i,j] <- goal(x[,i], x[,j], y)
         }
     }
+
+    m
 }
 
 goalSMIFE1 <- function(x1, x2, y) {
@@ -48,7 +50,7 @@ goalCI <- function(x1, x2, y) {
 
 genericPCA <- function(x, m) {
   e <- eigen(m)
-  
+
   epos <- e$values + abs(min(e$values))
   # enorm <- epos / sum(epos)
 
@@ -87,9 +89,10 @@ SMIFE2PCA <- function(x, y) {
 mRRSupervisedPCA <- function(x, y) {
   m <- matrixCPU(x, y, goalCI)
 
+
   # populate the diagonal
   for(i in 1:ncol(x)) {
-    m[i,i] <- 2 * mutinformation(x[,i], y)
+      m[i,i] <- 2 * mutinformation(x[,i], y)
   }
   
   # center the matrix around 0
@@ -114,7 +117,7 @@ mRRUnsupervisedPCA <- function(x) {
   res
 }
 
-mrmrPCA <- function(x, y = c(), method="mRRSupervised") {
+mrmrPCA <- function(x, y = c(), method="CI") {
   res <- c()
   
   if(method == "SMIFE1") {
@@ -124,7 +127,7 @@ mrmrPCA <- function(x, y = c(), method="mRRSupervised") {
   } else if(method == "MI") {
     res <- mRRUnsupervisedPCA(x)
   } else if(method == "CI") {
-    res <- mRRSupervisedPCA(x, y, platform)
+    res <- mRRSupervisedPCA(x, y)
   }
   
   res

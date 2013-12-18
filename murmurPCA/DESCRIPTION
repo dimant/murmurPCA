@@ -1,7 +1,7 @@
 Package: murmurPCA
 Title: MRMR PCA
 Version: 0.2
-Date: 2013.12.1
+Date: 2013.12.18
 Author: Diman Todorov
 Maintainer: Diman Todorov <diman@discrete-pca.org>
 Description: PCA for discrete data using information theory.

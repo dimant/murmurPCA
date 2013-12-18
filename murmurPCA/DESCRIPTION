@@ -3,7 +3,7 @@ Title: MRMR PCA
 Version: 0.2
 Date: 2013.12.1
 Author: Diman Todorov
-Maintainer: Diman Todorov <diman.todorov@gmail.com>
+Maintainer: Diman Todorov <diman@discrete-pca.org>
 Description: PCA for discrete data using information theory.
 License: MIT
 Depends: infotheo 

@@ -26,12 +26,14 @@ mrmrPCA(x, y = c(), method="CI")
   \item{method}{
     Method for measuring variance and covariance between columns. One
  of:
+\itemize{
  \item{MI}{entropy along the diagnoal and mutual information in other cells}
  \item{CI}{entropy along the diagonal and conditional mutual information
     in other cells}
  \item{SMIFE1}{goal function as proposed by Bollacker et al 1996}
  \item{SMIFE2}{goal function as proposed by Bollacker et al 1996}
   }
+}
 
 }
 
